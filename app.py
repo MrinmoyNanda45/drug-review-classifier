@@ -256,4 +256,4 @@ with tab2:
 
 # === Footer ===
 st.markdown("---")
-st.caption("🧪 Project: Patient's Condition Classification Using Drug Reviews | Built with 💻 Streamlit, SVM & NLP ")
+st.caption("🧪 Project: Patient's Condition Classification Using Drug Reviews | Built with 💻 Streamlit & NLP ")
