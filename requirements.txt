@@ -7,3 +7,7 @@ scipy
 textblob
 nltk
 seaborn
+scikit-learn
+transformers
+torch
+spacy
