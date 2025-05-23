@@ -169,8 +169,11 @@ with tab1:
         st.markdown(highlight_keywords(review), unsafe_allow_html=True)
 
         # Side effects
-        detected = [effect for effect in common_side_effects
-                    if re.search(rf"\b{re.escape(effect)}\b", review_clean)]  
+        detected = []
+        for effect in common_side_effects:
+            pattern = re.compile(re.escape(effect), flags=re.IGNORECASE)
+            if pattern.search(review_clean):
+                detected.append(effect)
         st.markdown("### 💥 Detected Side Effects")
         if detected:
             tags_html = ""
