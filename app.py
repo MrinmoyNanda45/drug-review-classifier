@@ -126,7 +126,7 @@ with tab1:
 
     if submit and review.strip():
         with st.spinner("Analyzing..."):
-            review_clean = review.lower()
+            review_clean = re.sub(r"[^\w\s]", " ", review.lower())  # ✅ lowercase + punctuation cleanup
             sentiment_score = TextBlob(review_clean).sentiment.polarity
             review_length = len(review_clean.split())
             sentiment_label = get_sentiment_label(sentiment_score)
@@ -170,7 +170,7 @@ with tab1:
 
         # Side effects
         detected = [effect for effect in common_side_effects
-                    if re.search(rf"\\b{re.escape(effect)}\\b", review_clean)]
+                    if re.search(rf"\b{re.escape(effect)}\b", review_clean)]  
         st.markdown("### 💥 Detected Side Effects")
         if detected:
             tags_html = ""
