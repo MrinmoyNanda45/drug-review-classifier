@@ -108,7 +108,7 @@ def pretty_label(raw_label):
 # === UI Setup ===
 st.set_page_config(page_title="Drug Review Classifier", page_icon="💊", layout="centered")
 st.markdown("<h1 style='text-align:center;'>💊 Drug Review Condition Classifier</h1>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align:center;'>🩺 Detect Condition, 💥 Side Effects and 🤖 Analyze Sentiment </h4><hr>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align:center;'>🩺 Detect Condition , 💥 Side Effects and 👀 Analyze Sentiment </h4><hr>", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(["🔍 Single Review", "📁 Batch Upload"])
 
